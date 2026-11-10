@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-obsidian-950 text-gray-200 select-none overflow-hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Cyberpunk Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f080c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3d2231;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff1e27;
+    box-shadow: 0 0 10px rgba(255, 30, 39, 0.5);
+  }
+}
+
+/* Glassmorphism Panel */
+.cyber-card {
+  background: rgba(18, 10, 14, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 30, 39, 0.15);
+  border-radius: 0.75rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(255, 30, 39, 0.35);
+  box-shadow: 0 0 15px rgba(255, 30, 39, 0.12);
+}
+
+/* Glowing Cyberpunk Buttons */
+.cyber-btn-red {
+  background: linear-gradient(135deg, #ff1e27 0%, #b31118 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(255, 30, 39, 0.35);
+  transition: all 0.2s ease;
+}
+
+.cyber-btn-red:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff3d44 0%, #c91018 100%);
+  box-shadow: 0 0 25px rgba(255, 30, 39, 0.65);
+  transform: translateY(-1px);
+}
+
+.cyber-btn-red:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.cyber-btn-secondary {
+  background: rgba(44, 24, 35, 0.6);
+  border: 1px solid rgba(255, 30, 39, 0.2);
+  color: #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.cyber-btn-secondary:hover:not(:disabled) {
+  background: rgba(61, 34, 49, 0.8);
+  border-color: rgba(255, 30, 39, 0.4);
+  color: #ffffff;
+}
+
+/* Cyber Inputs */
+.cyber-input {
+  background: rgba(15, 8, 12, 0.85);
+  border: 1px solid rgba(255, 30, 39, 0.2);
+  color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cyber-input:focus {
+  border-color: #ff1e27;
+  box-shadow: 0 0 12px rgba(255, 30, 39, 0.3);
+}
+
+/* Draggable Region for Custom Frameless Window TitleBar */
+.titlebar-drag {
+  -webkit-app-region: drag;
+}
+
+.titlebar-nodrag {
+  -webkit-app-region: no-drag;
+}
+

@@ -1,0 +1,82 @@
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+.pnp
+.pnp.js
+
+# ==========================================
+# Production & Distribution Builds
+# ==========================================
+dist/
+build/
+release/
+out/
+*.exe
+*.blockmap
+
+# ==========================================
+# Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+
+# ==========================================
+# Local Encrypted Tokens & System Entropy
+# ==========================================
+accounts.enc.json
+*.enc.json
+.hextra_entropy
+*.entropy
+
+# ==========================================
+# Logs & Debug Data
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# Editor & IDE Directories
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ==========================================
+# Temporary Files & Caches
+# ==========================================
+.cache/
+.parcel-cache/
+.eslintcache
+*.tmp
+*.temp
